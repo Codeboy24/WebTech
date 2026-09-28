@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwalela Kwalela - Web Technologies Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Web Space</h1>
+        <p><strong>Student Name:</strong> Kwalela Kwalela | <strong>ID:</strong> 202506481</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#learning-plan">Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Kwalela Kwalela, student number 202506481. I am currently studying Web Technologies (ICT251) at Mulungushi University. I am passionate about technology and computing, and my goal is to build strong skills in full-stack web development. I enjoy learning how modern web applications operate behind the scenes and look forward to mastering HTML, CSS, JavaScript, and database integration over the course of my studies.
+            </p>
+            <p>
+                To learn more about modern web standards, visit the official <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
+            </p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Gaming</li>
+                <li>Programming</li>
+                <li>Listening to Music</li>
+            </ul>
+        </section>
+
+        <!-- Learning Plan Section -->
+        <section id="learning-plan" class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>To improve my web development skills this semester, I will follow these steps:</p>
+            <ol>
+                <li>Practice building semantic HTML layouts and CSS styles daily.</li>
+                <li>Build small interactive projects using basic JavaScript.</li>
+                <li>Study online resources and complete weekly lab assignments systematically.</li>
+            </ol>
+
+            <h3>Weekly Schedule</h3>
+            <table>
+                <caption>Weekly Web Development Learning Plan</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML5 &amp; Accessibility</td>
+                        <td>Create structured forms and accessible semantic markup.</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS Layouts &amp; Flexbox</td>
+                        <td>Style navigation bars, cards, and responsive galleries.</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Media &amp; Responsiveness</td>
+                        <td>Embed media controls and test layout on mobile screens.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Photos Section -->
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="Study desk setup with a laptop and code editor open">
+                    <figcaption>My study setup where I practice web programming.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Mulungushi University campus environment">
+                    <figcaption>Mulungushi University campus library area.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="Notebook with handwritten code snippets and logic diagrams">
+                    <figcaption>My notes and project planning diagrams.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+            
+            <div class="media-item">
+                <h3>Self-Introduction Video</h3>
+                <video controls>
+                    <source src="videos/intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p><strong>Video Transcript:</strong> "Hello, my name is Kwalela Kwalela. I am studying Computer Science at Mulungushi University. One web skill I hope to learn is building fully responsive and accessible web interfaces."</p>
+            </div>
+
+            <div class="media-item">
+                <h3>Audio Clip - Why I Study Web Tech</h3>
+                <audio controls>
+                    <source src="videos/voice.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>In this recording, I share my passion for web development and how creating tools that impact real users motivates my daily learning.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p><em>Note: This contact form is for browser demonstration purposes only and does not submit external data.</em></p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Topic:</label>
+                    <select id="topic" name="topic">
+                        <option value="general">General Inquiry</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kwalela Kwalela | ICT251 Web Technologies Activity 2</p>
+    </footer>
+
+</body>
+</html>
