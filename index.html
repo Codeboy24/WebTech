@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwalela Kwalela - Web Technologies Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <header>
         <h1>Welcome to My Web Space</h1>
         <p><strong>Student Name:</strong> Kwalela Kwalela | <strong>ID:</strong> 202506481</p>
+        <button id="theme-toggle" class="btn">Toggle Dark Theme</button>
     </header>
 
     <nav>
+        <a href="#intro">Introduction</a>
         <a href="#about">About Me</a>
+        <a href="#projects">Projects & Skills</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#learning-plan">Learning Plan</a>
         <a href="#photos">My Photos</a>
@@ -23,6 +27,13 @@
     </nav>
 
     <main>
+        <!-- New Introductory Area -->
+        <section id="intro" class="content-section intro-area">
+            <h2>Hello, I'm Kwalela!</h2>
+            <p>I am a Computer Science student at Mulungushi University studying Web Technologies (ICT251). Welcome to my interactive portfolio where I showcase my journey in building modern, responsive, and accessible web interfaces.</p>
+            <a href="#projects" class="btn link-btn">View My Projects</a>
+        </section>
+
         <!-- About Me Section -->
         <section id="about" class="content-section">
             <h2>About Me</h2>
@@ -32,6 +43,35 @@
             <p>
                 To learn more about modern web standards, visit the official <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
             </p>
+        </section>
+
+        <!-- New Projects or Skills Section -->
+        <section id="projects" class="content-section">
+            <h2>Projects & Skills</h2>
+            
+            <div class="project-item">
+                <h3>Semantic HTML5 Structure</h3>
+                <button class="expand-btn btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>I have learned how to use structural elements like header, nav, main, section, and footer to create accessible and machine-readable web pages. This ensures screen readers and search engines can easily navigate my content.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Responsive CSS Styling</h3>
+                <button class="expand-btn btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>I can implement CSS Flexbox and media queries to adapt web layouts to different screen sizes, ensuring the site looks great on both mobile phones and desktop computers without sideways scrolling.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Interactive JavaScript</h3>
+                <button class="expand-btn btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>By using the Document Object Model (DOM) and event listeners, I have learned how to add interactive features to a webpage, such as validating forms without reloading the page and creating functional image galleries.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Hobbies Section -->
@@ -84,22 +124,18 @@
             </table>
         </section>
 
-        <!-- Photos Section -->
+        <!-- Photos Section (Updated for JS Gallery) -->
         <section id="photos" class="content-section">
             <h2>My Photos</h2>
-            <div class="gallery">
+            <div class="gallery-viewer">
                 <figure>
-                    <img src="images/photo1.jpg" alt="Study desk setup with a laptop and code editor open">
-                    <figcaption>My study setup where I practice web programming.</figcaption>
+                    <img id="gallery-img" src="images/photo1.jpg" alt="Study desk setup with a laptop and code editor open">
+                    <figcaption id="gallery-caption">My study setup where I practice web programming.</figcaption>
                 </figure>
-                <figure>
-                    <img src="images/photo2.jpg" alt="Mulungushi University campus environment">
-                    <figcaption>Mulungushi University campus library area.</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/photo3.jpg" alt="Notebook with handwritten code snippets and logic diagrams">
-                    <figcaption>My notes and project planning diagrams.</figcaption>
-                </figure>
+                <div class="gallery-controls">
+                    <button id="prev-btn" class="btn">Previous</button>
+                    <button id="next-btn" class="btn">Next</button>
+                </div>
             </div>
         </section>
 
@@ -130,7 +166,10 @@
         <section id="contact" class="content-section">
             <h2>Contact Me</h2>
             <p><em>Note: This contact form is for browser demonstration purposes only and does not submit external data.</em></p>
-            <form action="#" method="post">
+            
+            <div id="form-feedback" class="hidden feedback-msg"></div>
+
+            <form id="contact-form" action="#" method="post">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -155,13 +194,22 @@
                     <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
                 </div>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
+
+            <div id="form-preview" class="hidden preview-box">
+                <h3>Message Validated! Summary:</h3>
+                <p><strong>Name:</strong> <span id="preview-name"></span></p>
+                <p><strong>Email:</strong> <span id="preview-email"></span></p>
+                <p><strong>Topic:</strong> <span id="preview-topic"></span></p>
+                <p><strong>Message:</strong> <span id="preview-message"></span></p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Kwalela Kwalela | ICT251 Web Technologies Activity 2</p>
+        <p>&copy; 2026 Kwalela Kwalela | ICT251 Web Technologies Activity 3</p>
+        <p><a href="https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPO-NAME" target="_blank">View Source on GitHub</a></p>
     </footer>
 
 </body>
